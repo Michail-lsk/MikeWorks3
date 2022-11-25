@@ -28,23 +28,37 @@ public class Collection {
             System.out.println("This index outside value");
     }
 
-    public void ShowArray() {
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(i);
+    public void eraseString(String s) {
+                int number = -1;
+                for (int i = 0; i < array.length; i++) {
+                    if (s.equals(array[i])) {
+                        number = i;
+                    }
+            }
+            if (number != -1) {
+            erase(number);
+            }
         }
-    }
-
-    public int getSize() {
-        return size;
-    }
-
-    public String getName(int i) {
-        return array[i];
-    }
-
-    public int getLength() {
-        return array.length;
-    }
 
 
-}
+
+            public void ShowArray () {
+                for (int i = 0; i < array.length; i++) {
+                    System.out.println(i);
+                }
+            }
+
+            public int getSize () {
+                return size;
+            }
+
+            public String getName ( int i){
+                return array[i];
+            }
+
+            public int getLength () {
+                return array.length;
+            }
+
+
+        }
